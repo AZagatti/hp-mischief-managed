@@ -1,0 +1,1 @@
+export { HOUSES } from './houses'
