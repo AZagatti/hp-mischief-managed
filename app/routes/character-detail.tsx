@@ -1,5 +1,5 @@
 import { ArrowLeft, Heart, Shield, Skull, Sparkles, User } from 'lucide-react'
-import { Link, redirect } from 'react-router'
+import { Link, Navigate, redirect } from 'react-router'
 import { useShallow } from 'zustand/shallow'
 import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar'
 import { Badge } from '~/components/ui/badge'
@@ -49,7 +49,7 @@ export default function CharacterDetailPage() {
   )
 
   if (!character) {
-    return redirect('/')
+    return <Navigate to="/" />
   }
 
   const isCharacterFavorite = isFavorite(character.id)

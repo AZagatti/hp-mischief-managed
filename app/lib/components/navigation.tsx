@@ -73,7 +73,7 @@ export const Navigation = () => {
         <div className="hidden flex-1 items-center justify-center md:flex">
           <div className="flex items-center gap-1">
             {navItems.map(item => (
-              <Link key={item.path} to={item.path}>
+              <Link key={item.path} to={item.path} prefetch="intent">
                 <Button
                   variant={isActive(item.path) ? 'default' : 'ghost'}
                   size="sm"
